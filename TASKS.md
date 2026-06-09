@@ -1,20 +1,17 @@
-# TASKS.md — Kanban Task Cards
+# TASKS.md — Sprint Tasks
 
-Create each task below as a **GitHub Issue** and add it to your Kanban board under **Backlog**.
-Assign each issue to a team member before you start the sprint.
+You are a contributor to this repository. Your job is to improve it, fix it, and extend it — the same way developers contribute to real open source projects.
+
+Each task below is a GitHub Issue. Create all of them in the Issues tab, add them to the Kanban board under **Backlog**, and assign them to team members before you start.
 
 ---
 
-## How to create an Issue
+## How Kanban works here
 
-1. Go to the repository on GitHub.
-2. Click the **Issues** tab.
-3. Click **New issue**.
-4. Copy the task title exactly as written below.
-5. Paste the task description into the body.
-6. Assign it to a team member.
-7. Click **Submit new issue**.
-8. Open your Kanban board and add the issue as a card under **Backlog**.
+- Pick a task from **Backlog** → move it to **To Do**
+- Start working → move it to **In Progress**
+- Open a PR → move it to **In Review**
+- PR gets merged → move it to **Done**
 
 ---
 
@@ -22,102 +19,100 @@ Assign each issue to a team member before you start the sprint.
 
 ---
 
-### `chore: fork the repo and configure remotes`
+### `feat: add a "Common Mistakes" section to the README`
 
-**Assigned to:** *(pick one person or all)*
+A section that lists the most frequent Git mistakes beginners make and how to fix them.
+Things like committing directly to main, using `git push --force` instead of `--force-with-lease`, or writing bad commit messages.
 
-1. Fork the repository to your personal GitHub account.
-2. Clone your fork locally.
-3. Add the original repo as `upstream`.
-4. Run `git remote -v` and confirm both `origin` and `upstream` appear.
-5. Post a screenshot of your terminal output in the Issue comments as proof.
-
----
-
-### `chore: add all teammates as collaborators`
-
-**Assigned to:** *(repo owner)*
-
-1. Go to Settings → Collaborators.
-2. Add every teammate by GitHub username.
-3. Confirm all teammates have accepted their invitation.
-4. Leave a comment on this Issue once everyone has access.
+**Your job:**
+1. Create a branch `feat/common-mistakes`
+2. Add a new section `## Common Mistakes` at the bottom of `README.md`
+3. List at least 4 mistakes with a short explanation for each
+4. Open a PR titled `feat(readme): add common mistakes section`
+5. Link this Issue in the PR description
 
 ---
 
-### `chore: set up the Kanban board`
+### `fix: audit the README for unclear or missing steps`
 
-**Assigned to:** *(repo owner or any one person)*
+Read through the entire `README.md` as if you are a student seeing it for the first time.
+Find any step that is confusing, missing, or wrong.
 
-1. Create a Board-type project named `Sprint 1`.
-2. Add the columns: `Backlog`, `To Do`, `In Progress`, `In Review`, `Done`.
-3. Create a GitHub Issue for every task in this file.
-4. Add all issues as cards under **Backlog**.
-5. Assign each card to a teammate.
-
----
-
-### `feat: create your first feature branch`
-
-**Assigned to:** *(each student individually)*
-
-1. Pull the latest `main`.
-2. Create a branch named `feat/YOUR_NAME-first-branch`.
-3. Create a file at `bios/YOUR_NAME.md`.
-4. Write 3–5 sentences about yourself inside it.
-5. Commit with the message `docs(bios): add YOUR_NAME bio`.
-6. Push the branch.
-7. Open a Pull Request using the PR template in `CONVENTIONS.md`.
+**Your job:**
+1. Create a branch `fix/readme-audit`
+2. Fix every unclear or incomplete step you find
+3. Commit each fix separately with a descriptive message
+4. Open a PR titled `fix(readme): clarify steps in [section name]`
+5. In the PR description, list everything you changed and why
 
 ---
 
-### `feat: review and merge a teammate's PR`
+### `feat: create a GLOSSARY.md`
 
-**Assigned to:** *(each student reviews someone else's PR)*
+New contributors get confused by terms like `upstream`, `rebase`, `staging area`, `HEAD`.
+This file gives them a quick reference.
 
-1. Open a teammate's Pull Request.
-2. Read through the changes in the **Files changed** tab.
-3. Leave at least one comment or suggestion.
-4. If everything looks good, click **Approve**.
-5. Click **Merge pull request**.
-6. Move the teammate's Kanban card to **Done**.
-
----
-
-### `chore: sync your branch after a teammate merges`
-
-**Assigned to:** *(everyone)*
-
-1. Wait until at least one teammate's PR has been merged into `main`.
-2. Run the daily sync commands from `CONVENTIONS.md` Part 6.
-3. Confirm your branch is up to date with `git log --oneline -5`.
-4. Post the output in the Issue comments.
+**Your job:**
+1. Create a branch `feat/glossary`
+2. Create a new file `GLOSSARY.md` at the root of the repo
+3. Define at least 10 Git/GitHub terms in plain language
+4. Each term should have: the word, a one-sentence definition, and a short example
+5. Open a PR titled `feat: add GLOSSARY.md`
 
 ---
 
-### `feat: simulate and resolve a merge conflict`
+### `chore: reorganize the repo folder structure`
 
-**Assigned to:** *(two students working together)*
+The repo has no folders. As it grows this will get messy.
+Propose and implement a cleaner structure.
 
-1. Both students create a branch from `main`.
-2. Both students edit the **same line** in `bios/shared.md` (create this file if it doesn't exist).
-3. Both students commit and push their branches.
-4. One student opens a PR and merges it first.
-5. The second student syncs their branch using rebase.
-6. The second student resolves the conflict manually.
-7. The second student pushes and opens their PR.
-8. Take a screenshot of the resolved conflict and post it in the Issue comments.
+**Your job:**
+1. Create a branch `chore/folder-structure`
+2. Create a `/guides` folder and move relevant `.md` files into it
+3. Update any internal links in `README.md` that break after the move
+4. Open a PR titled `chore: reorganize files into /guides folder`
+5. In the PR description, explain why you structured it this way
 
 ---
 
-### `docs: update README with what you learned`
+### `docs: add a CONTRIBUTING.md`
 
-**Assigned to:** *(each student individually)*
+Real open source repos have a `CONTRIBUTING.md` that tells new contributors exactly how to work on the project.
 
-1. Create a branch named `docs/YOUR_NAME-reflection`.
-2. Open `README.md`.
-3. Add a `## What I learned` section at the bottom.
-4. Write at least 3 things you learned during this project.
-5. Commit with `docs: add YOUR_NAME reflection to README`.
-6. Push and open a PR.
-7. Assign a teammate as reviewer.
+**Your job:**
+1. Create a branch `docs/contributing`
+2. Create `CONTRIBUTING.md` at the root of the repo
+3. Include: how to fork, how to branch, commit rules, PR rules, and how to get a review
+4. Keep it short — a new person should be able to read it in under 3 minutes
+5. Open a PR titled `docs: add CONTRIBUTING.md`
+
+---
+
+### `fix: simulate and resolve a merge conflict`
+
+> This task requires two people working together.
+
+Both of you will edit the same line in `README.md`. One PR merges first. The other person has to resolve the conflict before their PR can merge.
+
+**Your job:**
+1. Person A and Person B each create a branch from the same point on `main`
+2. Both edit the opening paragraph of `README.md` — differently
+3. Person A opens a PR and merges it first
+4. Person B fetches, rebases, and resolves the conflict
+5. Person B pushes and opens their PR
+6. Person B adds a comment to this Issue describing what the conflict was and how they resolved it
+
+---
+
+### `feat: add a "What We Built" section to the README`
+
+At the end of the project, the README should summarize what the team actually produced.
+
+**Your job:**
+1. Create a branch `feat/what-we-built`
+2. Add a `## What We Built` section at the end of `README.md`
+3. List every file in the repo with a one-sentence description of what it contains
+4. Add each contributor's GitHub username with a link to their profile
+5. Open a PR titled `feat(readme): add what we built section`
+
+> This task should be done last, after all other PRs are merged.
