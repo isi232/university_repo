@@ -166,7 +166,7 @@ chore: move images into /assets folder
 
 ## 8. What to Do When a Teammate Merges to Main
 
-> Run this every time before you start working, and whenever you see a new merge on `main`.
+> Run this every time before you start working, and whenever you see a new merge on `main`. Skipping this step may cause conflicts in your branch.
 
 1. Run `git fetch origin`
 2. Run `git checkout your-branch-name`
