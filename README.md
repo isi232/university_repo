@@ -145,7 +145,7 @@ chore: move images into /assets folder
 2. Click **Compare & pull request**.
 3. Set **base** to `main` and confirm **compare** is your branch.
 4. Write the PR title using the same convention as commits: `feat(readme): add branching section`
-5. Fill in the description:
+5. Fill in the PR description using this template:
 
 ```
 ## What does this PR do?
